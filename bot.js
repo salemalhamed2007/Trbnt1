@@ -29,9 +29,15 @@ client.on('message', message => {
 
 
 
-
-client.on('ready', () => {                           
-client.user.Playing(`=help|=invite`,'https://www.youtube.com/gg');                                                                                                                                                                                                                                                                                                                                                                                                                            
+client.on("ready", async () => {
+    if(client.guilds.size > 1) {
+        client.user.setActivity(`=help`);
+        console.log(`=help`)
+    } else {
+        client.user.setActivity(`=help`);
+        console.log(`=help`)
+    }
+    client.user.setStatus("online");
 });
 
 
