@@ -31,7 +31,7 @@ client.on('message', message => {
 
 
 client.on('ready', () => {                           
-client.user.setGame(`=help |=invite |=support`,'https://www.twitch.tv/fofodiscord');                                                                                                                                                                                                                                                                                                                                                                                                                            
+client.user.Playing(`=help|=invite`,'https://www.youtube.com/gg');                                                                                                                                                                                                                                                                                                                                                                                                                            
 });
 
 
@@ -44,11 +44,6 @@ client.on('message', msg => {
   }
 });
 
-  client.on('message', msg => {//msg
-    if (msg.content === '=help') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482663782200377344/1535146335144.png"})
-    }
-  });;
   
  
   client.on('message', msg => {//msg
