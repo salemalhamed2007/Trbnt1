@@ -3859,4 +3859,4 @@ message.channel.sendFile(canvas.toBuffer())
 
 
 
-client.login(process.env.BOT_TOKEN);
+client.login('NDg4NjUxODgyMDAxMDcyMTI5.DngLSA.1teRtD0u-441jPljuDBJBz76IfE');
