@@ -29,18 +29,92 @@ client.on('message', message => {
 
 
 
-client.on("ready", async () => {
-    if(client.guilds.size > 1) {
-        client.user.setActivity(`=help`);
-        console.log(`=help`)
-    } else {
-        client.user.setActivity(`=help`);
-        console.log(`=help`)
-    }
-    client.user.setStatus("online");
+
+client.on('ready', () => {                           
+client.user.setGame(`=help |=invite |=support`,'https://www.twitch.tv/fofodiscord');                                                                                                                                                                                                                                                                                                                                                                                                                            
 });
 
 
+
+
+
+client.on('message', msg => {
+  if (msg.content === '=ownerbot') {
+    msg.reply('**OwnerBot <@382889731316514826>**');
+  }
+});
+
+  client.on('message', msg => {//msg
+    if (msg.content === '=help') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482663782200377344/1535146335144.png"})
+    }
+  });;
+  
+ 
+  client.on('message', msg => {//msg
+    if (msg.content === '=color') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/470638175254216716/482679181553958922/1535149909407.png"})
+    }
+  });;
+
+
+client.on('message', msg => {//msg
+    if (msg.content === 'السلام عليكم') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/477438358902276099/478177205164310529/004ca53f54b2ff2c.png"})
+    }
+  });;
+
+
+  client.on('message', msg => {//msg
+    if (msg.content === '=help-admin') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482643305335750678/1535141472722.png"})
+    }
+  });;
+
+  client.on('message', msg => {//msg
+    if (msg.content === '=help-public') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482643305335750678/1535141472722.png"})
+    }
+  });;
+
+  client.on('message', msg => {//msg
+    if (msg.content === '=help-games') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482643305335750678/1535141472722.png"})
+    }
+  });;
+
+
+  client.on('message', msg => {//msg
+    if (msg.content === '=help-music') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482643305335750678/1535141472722.png"})
+    }
+  });;
+
+client.on('message', msg => {//msg
+    if (msg.content === '=help-color') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482643305335750678/1535141472722.png"})
+    }
+  });;
+
+  client.on('message', msg => {//msg
+    if (msg.content === '=help-welcome') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482643305335750678/1535141472722.png"})
+    }
+  });;
+
+
+  client.on('message', msg => {//msg
+    if (msg.content === '=invite') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482643305335750678/1535141472722.png"})
+    }
+  });;
+
+
+  client.on('message', msg => {//msg
+    if (msg.content === '=support') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482643305335750678/1535141472722.png"})
+    }
+  });;
 
 
 client.on('message', msg => {
@@ -293,13 +367,13 @@ client.on("message", message => {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setDescription(`
-─════════════ {✯BomBot♧✯} ════════════─
+─════════════ {✯TrbntBot♧✯} ════════════─
 ❖-|welcome|🚩لتفعيل أمر الترحيب أنشاء غرفة أسمها welcome🚩
 ❖-|welcomeleft|🚩لتفيل امر المغادرة أنشاء غرفة أسمها welcome🚩
 ❖-|warn|🚩لتفعيل أمر الأنذار أنشأ غرفة أسمها warns🚩
 ❖-|suggest|🚩لتفعيل الريبورت أنشاء غرفة أسمها suggestions🚩
 ❖-|log|🚩لوق لحماية سيرفرك من تهكير اذا حد طرد شخص يظهر لك مين هو وأشياذ كثيرة🚩
-─════════════ {✯BomBot♧✯} ════════════─
+─════════════ {✯TrbntBot♧✯} ════════════─
       `)
    message.channel.sendEmbed(embed)
     }
@@ -313,8 +387,8 @@ client.on("message", message => {
  if (message.content === "=support") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
-      .setFooter('© BOMbot جميع الحقوق محفوظة 2018 لــبوت')
-      .addField('سيرفر الدعم الفني', `https://discord.gg/CXE42RP`)
+      .setFooter('© Trbntbot جميع الحقوق محفوظة 2018 لــبوت')
+      .addField('**سفواً ولاكن لا يتواجد حلياً سيرفر سبورت**')
   message.author.send({embed});
       message.channel.send(":white_check_mark: | Check Your DM تم الأرسال بلخاص")
  }
@@ -1055,25 +1129,7 @@ const Love = [  "**احبك / عدد قطرات المـــطر والشجر و
 
 
 
-  client.on("message", msg => {
-           var prefix = "=";
-  if(msg.content.startsWith (prefix + "id")) {
-    if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');
-      const embed = new Discord.RichEmbed();
-  embed.addField(":cloud_tornado:  الاسم", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
-          .addField(":id:  الايدي", `**[ ${msg.author.id} ]**`, true)
-          .setColor("RANDOM")
-          .setFooter(msg.author.username , msg.author.avatarURL)
-          .setThumbnail(`${msg.author.avatarURL}`)
-          .setTimestamp()
-          .setURL(`${msg.author.avatarURL}`)
-          .addField(':spy:  الحالة', `**[ ${msg.author.presence.status.toUpperCase()} ]**`, true)
-          .addField(':satellite_orbital:   يلعب', `**[ ${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name} ]**`, true)
-          .addField(':military_medal:  الرتب', `**[ ${msg.member.roles.filter(r => r.name).size} ]**`, true)
-          .addField(':robot:  هل هو بوت', `**[ ${msg.author.bot.toString().toUpperCase()} ]**`, true);
-      msg.channel.send({embed: embed})
-	    }
-});
+
 
 
    client.on("message", message => {
@@ -1497,7 +1553,7 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     console.log(`in ${client.guilds.size} servers `)
     console.log(`[Codes] ${client.users.size}`)
-    client.user.setStatus("idle")
+    client.user.setStatus("online")
 });
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 client.on('message', async msg => { // eslint-disable-line
@@ -1718,25 +1774,6 @@ ${prefix}queue ⇏ ♠لمعرفة قآئمة التشغيل❗
 
 
 
-client.on("message", message => {
- if (message.content === "=help-music") {
-  const embed = new Discord.RichEmbed()
-      .setColor("RANDOM")
-      .setDescription('👑أوامر الموسيقى👑')
-	  .addField('❖-|=play', `🎸لتشغيل أغنية برآبط أو بأسم🎵`)
-	  .addField('❖-|=skip', `♠لتجآوز الأغنية الحآلية🎺`)
-	  .addField('❖-|=pause', `🚩إيقآف الأغنية مؤقتا💯`)
-	  .addField('❖-|=resume', `🎧لموآصلة الإغنية بعد إيقآفهآ مؤقتا🎵`)
-          .addField('❖-|=vol', `🔊تغيير درجة الصوت 100 - 0🔇`)
-          .addField('❖-|=stop', `🔘لإخرآج البوت من الروم❗`)
-          .addField('❖-|=nb', `🎼لمعرفة الأغنية المشغلة حآليا🎷`)
-          .addField('❖-|=queue', `🎸لمعرفة قآئمة التشغيل🎤`)
-          .addField('❖-|=music', `🔰لأرسال الأوامر بلشات🔰`)
-  message.author.send({embed});
-      message.channel.send(":white_check_mark: | Check Your DM تم الأرسال بلخاص")
-
- }
-});
 
 client.on("message", message => {
  if (message.content === "=help-welcome") {
@@ -1871,7 +1908,6 @@ client.on('message', message => {
    message.channel.sendEmbed(EsTeKnAN);
   }
 });
-
   
 client.on('message', message => {
  if (message.content.startsWith("=wlc 4")) {
@@ -3450,7 +3486,7 @@ client.on("message", (message) => {
     if (message.author.id === client.user.id) return;
 	if(!message.channel.guild) return;       
 if (message.content === '=credits') {
-message.channel.send(`** ${message.author.username}, your :credit_card: balance is ${games[message.author.id].credits}.**`)
+message.channel.send(`** ${message.author.username}, your :credit_card: balance is ${games[creditsprobot].credits}**`)
 }
 });
 //معلوماتي
