@@ -1465,7 +1465,7 @@ npm install queue
 */
 client.on('message', async msg => { 
 	if (msg.author.bot) return undefined;
-    if (!msg.content.startsWith(prefix)) return undefined;
+    if (!msg.content.startsWith('=')) return undefined;
     
     const args = msg.content.split(' ');
 	const searchString = args.slice(1).join(' ');
