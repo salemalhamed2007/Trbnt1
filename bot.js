@@ -1399,7 +1399,7 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setDescription(`
 
-👑Commands BomBot♧|أوامر البوت الأسطورية👑
+👑Commands TrbutBot♧|أوامر البوت الأسطورية👑
 
 ─════════════ {✯TrbutBot✯} ════════════─
 ❧ =help-admin ➺ 🔰اوامر الادارة🔰
