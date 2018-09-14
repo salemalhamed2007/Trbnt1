@@ -3502,4 +3502,4 @@ message.channel.sendFile(canvas.toBuffer())
 
 
 
-client.login('NDg4NjUxODgyMDAxMDcyMTI5.Dn0-SQ.BhR46pUk6o5zGCRoLOlgMFDXcvg');
+client.login('NDg4NjUxODgyMDAxMDcyMTI5.Dn1O8A.6YiwqU3klnHTquEb35bIuXiZQXY');
