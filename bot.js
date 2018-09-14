@@ -1,6 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const convert = require("hh-mm-ss")
+const ytdl = require("ytdl-core");
+const { Client, Util } = require('discord.js');
+const getYoutubeID = require('get-youtube-id');
+const fetchVideoInfo = require('youtube-info');
+const YouTube = require('simple-youtube-api');
+const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
+const queue = new Map();
 const dateFormat = require('dateformat');
 const fs = require('fs');
 const pretty = require('pretty-ms');
@@ -31,90 +38,9 @@ client.on('message', message => {
 
 
 client.on('ready', () => {                           
-client.user.setGame(`=help |=invite |=support`,'https://www.twitch.tv/fofodiscord');                                                                                                                                                                                                                                                                                                                                                                                                                            
+client.user.setGame(`Prefix-> =`,'https://www.youtube.com/gg');                                                                                                                                                                                                                                                                                                                                                                                                                            
 });
 
-
-
-
-
-client.on('message', msg => {
-  if (msg.content === '=ownerbot') {
-    msg.reply('**OwnerBot <@382889731316514826>**');
-  }
-});
-
-  client.on('message', msg => {//msg
-    if (msg.content === '=help') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482663782200377344/1535146335144.png"})
-    }
-  });;
-  
- 
-  client.on('message', msg => {//msg
-    if (msg.content === '=color') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/470638175254216716/482679181553958922/1535149909407.png"})
-    }
-  });;
-
-
-client.on('message', msg => {//msg
-    if (msg.content === 'السلام عليكم') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/477438358902276099/478177205164310529/004ca53f54b2ff2c.png"})
-    }
-  });;
-
-
-  client.on('message', msg => {//msg
-    if (msg.content === '=help-admin') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482643305335750678/1535141472722.png"})
-    }
-  });;
-
-  client.on('message', msg => {//msg
-    if (msg.content === '=help-public') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482643305335750678/1535141472722.png"})
-    }
-  });;
-
-  client.on('message', msg => {//msg
-    if (msg.content === '=help-games') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482643305335750678/1535141472722.png"})
-    }
-  });;
-
-
-  client.on('message', msg => {//msg
-    if (msg.content === '=help-music') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482643305335750678/1535141472722.png"})
-    }
-  });;
-
-client.on('message', msg => {//msg
-    if (msg.content === '=help-color') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482643305335750678/1535141472722.png"})
-    }
-  });;
-
-  client.on('message', msg => {//msg
-    if (msg.content === '=help-welcome') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482643305335750678/1535141472722.png"})
-    }
-  });;
-
-
-  client.on('message', msg => {//msg
-    if (msg.content === '=invite') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482643305335750678/1535141472722.png"})
-    }
-  });;
-
-
-  client.on('message', msg => {//msg
-    if (msg.content === '=support') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/476028851030458368/482643305335750678/1535141472722.png"})
-    }
-  });;
 
 
 client.on('message', msg => {
@@ -1327,7 +1253,7 @@ client.on('message', message => {
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-            .setTitle('``INFO  BomBot`` ')
+            .setTitle('``INFO  Trbnt`` ')
             .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``servers``', [client.guilds.size], true)
             .addField('``channels``' , `[ ${client.channels.size} ]` , true)
@@ -1336,7 +1262,7 @@ client.on('message', message => {
             .addField('``My ID``' , `[ ${client.user.id} ]` , true)
                   .addField('``My Prefix``' , `=` , true)
                   .addField('``My Language``' , `[ Java Script ]` , true)
-                  .setFooter('By |<@382889731316514826>')
+                  .setFooter('By |IISLooMz_')
     })
 }
 });
@@ -1475,21 +1401,19 @@ client.on("message", message => {
 
 👑Commands BomBot♧|أوامر البوت الأسطورية👑
 
-─════════════ {✯BomBot✯} ════════════─
+─════════════ {✯TrbutBot✯} ════════════─
 ❧ =help-admin ➺ 🔰اوامر الادارة🔰
 
 ❧ =help-public ➺ 👑اوامر العامة👑
 
 ❧ =help-games ➺ 🎮اوامر الالعاب🎮
 
-❧ =help-music ➺ 🎵اوامر الاغاني🎶
-
 ❧ =help-welcome ➺ 👋معلومات الترحيب في البوت👋
 
 ❧ =help-color ➺ ✏أوامر الألوان🎉
 
 ❧ =help-use ➺🚩للمزيد من المعلومات للبوت🚩
-─════════════ {✯BomBot✯} ════════════─
+─════════════ {✯TrbutBot✯} ════════════─
       `)
    message.channel.sendEmbed(embed)
 
@@ -1529,13 +1453,6 @@ client.on("message", message => {
 
 });
 
-const ytdl = require("ytdl-core");
-const { Client, Util } = require('discord.js');
-const getYoutubeID = require('get-youtube-id');
-const fetchVideoInfo = require('youtube-info');
-const YouTube = require('simple-youtube-api');
-const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
-const queue = new Map();
 
 /*
 البكجآت
@@ -3821,4 +3738,4 @@ message.channel.sendFile(canvas.toBuffer())
 
 
 
-client.login('NDg4NjUxODgyMDAxMDcyMTI5.DngLSA.1teRtD0u-441jPljuDBJBz76IfE');
+client.login('NDg4NjUxODgyMDAxMDcyMTI5.Dn0-SQ.BhR46pUk6o5zGCRoLOlgMFDXcvg');
